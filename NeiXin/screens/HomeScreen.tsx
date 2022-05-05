@@ -9,12 +9,12 @@ interface IProp {
   navigation: DrawerNavigationProp<any>,
 }
 function HomeScreen({ navigation }: IProp) {
-  const openDrawer = () => {
-    navigation.openDrawer()
+  const goTo = () => {
+    navigation.navigate('About Page')
   }
   return (
     <View style={{ ...rootStyles.container, ...rootStyles.centered }}>
-      <TouchableOpacity style={{backgroundColor: 'blue'}} onPress={openDrawer}>
+      <TouchableOpacity onPress={goTo}>
         <Text>欢迎光临</Text>
       </TouchableOpacity>
     </View>
