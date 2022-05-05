@@ -3,11 +3,12 @@ import 'react-native-gesture-handler'; // this MUST be on extreme top of this fi
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './NeiXin/screens/HomeScreen';
+import RootDrawer from './NeiXin/navigation/RootDrawer';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <HomeScreen/>
+      <RootDrawer/>
     </NavigationContainer>
   );
 };
