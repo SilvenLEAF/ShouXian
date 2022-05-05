@@ -7,15 +7,15 @@ import AboutScreen from '../screens/AboutScreen';
 import HomeScreen from '../screens/HomeScreen';
 
 
-// const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
 // const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
 function RootDrawer() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home Page" component={HomeScreen}/>
-      <Tab.Screen name="About Page" component={AboutScreen}/>
-    </Tab.Navigator>
+    <Drawer.Navigator>
+      <Drawer.Screen name="Home Page" component={HomeScreen}/>
+      <Drawer.Screen name="About Page" component={AboutScreen}/>
+    </Drawer.Navigator>
   )
 }
 
