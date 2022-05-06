@@ -4,7 +4,6 @@ import rootVariables from "../rootVariables";
 export const btnStyles = StyleSheet.create({
   btn: {
     borderRadius: 30,
-    // backgroundColor: rootStyleStore.color.redColor,
   },
   fixedWidthBtn: {
     borderRadius: 30,
@@ -20,8 +19,6 @@ export const btnStyles = StyleSheet.create({
     paddingHorizontal: 16,
   },  
 });
-
-
 
 export const alertModalStyles = StyleSheet.create({
   alertModal: {

@@ -12,17 +12,16 @@ const Stack = createStackNavigator();
 function ContactStack() {
   return (
     <Stack.Navigator screenOptions={{
-      title: "Contact Stack",
+      title: "ContactStack",
       headerMode: "screen",
       cardStyle: {
         backgroundColor: rootVariables.bodyBG,
       }
     }}>
       <Stack.Screen name="Contact" options={{
-        title: "Contact Page",
-        header: ({navigation})=> <HamburgerHeader navigation={navigation} title="Contact Page" />
+        header: ({ navigation }) => <HamburgerHeader navigation={navigation} title="Contact Page" />
       }} component={ContactScreen} />
-      <Stack.Screen name="Details" component={DetailScreen} />
+      <Stack.Screen name="DetailScreen" options={{ title: "Contact Detail Page" }} component={DetailScreen} />
     </Stack.Navigator>
   )
 }

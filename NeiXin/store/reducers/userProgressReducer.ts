@@ -1,5 +1,14 @@
 import { userRankMap, userRankType } from "../../core/Gamify";
-import { removeArrayItems, removeDuplicateObjItems, removeNullProps } from "../../utils/helpers";
+
+/*
+  This file contains 5 main things 
+  1. initState
+  2. iniState interface
+  3. reducerTypes map
+  4. reducer function (state = initState, action)
+  . it is a function which is returns the state based on if/switch statements
+  5. optionally payload interface
+*/
 
 export interface IUserProgressState {
   rank: userRankType,

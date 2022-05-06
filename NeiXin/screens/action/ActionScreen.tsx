@@ -62,7 +62,7 @@ function HomeScreen(props: IProp) {
 const mapStateToProps = (state: IRootState) => {
   return {
     ...state.app,
-    ...state.profile,
+    ...state.user,
     ...state.progress,
   }
 }

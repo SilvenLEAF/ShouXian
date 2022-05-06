@@ -14,17 +14,16 @@ const Stack = createStackNavigator();
 function AboutStack() {
   return (
     <Stack.Navigator screenOptions={{
-      title: "About Stack",
+      title: "AboutStack",
       headerMode: "screen",
       cardStyle: {
         backgroundColor: rootVariables.bodyBG,
       }
     }}>
-      <Stack.Screen name="About" options={{
-        title: "AboutScreen",
-        header: ({navigation})=> <HamburgerHeader navigation={navigation} title="About Page" />
+      <Stack.Screen name="AboutScreen" options={{
+        header: ({ navigation }) => <HamburgerHeader navigation={navigation} title="About Page" />
       }} component={AboutScreen} />
-      <Stack.Screen name="DetailScreen" options={{title: "About Detail Screen"}} component={DetailScreen} />
+      <Stack.Screen name="DetailScreen" options={{ title: "About Detail Page" }} component={DetailScreen} />
     </Stack.Navigator>
   )
 }

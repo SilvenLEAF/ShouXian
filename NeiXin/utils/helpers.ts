@@ -1,8 +1,10 @@
 import { userRanks } from "../core/Gamify";
 import rootVariables from "../root/rootVariables";
 
-export const randomNumber = (num: number) => {
-  return Math.floor(Math.random() * num);
+
+
+export const randomNumber = (max: number, min: number = 0) => {
+  return min + Math.floor(Math.random() * max);
 }
 
 /*

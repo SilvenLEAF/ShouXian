@@ -39,7 +39,7 @@ function ProfileScreen(props: propsInterface) {
 
   const getRandomAvatar = () => {
     const genderArr: ('female'|'male')[] = ['female', 'male'];
-    const avIndex = genderArr[randomNumber(2)]
+    const avIndex = genderArr[randomNumber(2, 0)]
     const newAvatar = rootVariables.assets.avatars[avIndex];
     setAvatar(newAvatar);
   }

@@ -1,28 +1,34 @@
-import React, { useState } from 'react'
-import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native'
-
-import { NavigationProp } from '@react-navigation/native';
-import { connect } from 'react-redux';
-
+/* ------------------------------
+.            ICONS
+------------------------------ */
 import IconF5 from 'react-native-vector-icons/FontAwesome5';
 import IconMI from 'react-native-vector-icons/MaterialIcons';
 import IconEntypo from 'react-native-vector-icons/Entypo';
+/* ------------------------------
+------------------------------ */
 
-// ___________________ store (redux + async)
-import AsyncStore, { AsyncStoreKeyMap } from '../../utils/AsyncStore';
 
-import { IRootState } from '../../store/store';
-import { IAppSettingState } from '../../store/reducers/appSettingsReducer';
+import React, { useState } from 'react'
+import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native'
+import { NavigationProp } from '@react-navigation/native';
 
-import userProgressActions from '../../store/actions/userProgressAction';
 import { Modal, Portal, Button, Provider, RadioButton, TextInput } from 'react-native-paper';
-import { IUserProfileState, IUserProfileUpdatePayload } from '../../store/reducers/userProfileReducer';
-import userProfileActions from '../../store/actions/userProfileAction';
 import Toast from 'react-native-toast-message';
 
 import { refineBtnColor, removeNullProps } from '../../utils/helpers';
 import rootVariables from '../../root/rootVariables';
 import rootStyles from '../../root/rootStyles';
+// ___________________ store (redux + async)
+import { connect } from 'react-redux';
+import AsyncStore, { AsyncStoreKeyMap } from '../../utils/AsyncStore';
+
+import { IRootState } from '../../store/store';
+import { IAppSettingState } from '../../store/reducers/appSettingsReducer';
+import { IUserProfileState, IUserProfileUpdatePayload } from '../../store/reducers/userProfileReducer';
+
+import userProgressActions from '../../store/actions/userProgressAction';
+import userProfileActions from '../../store/actions/userProfileAction';
+
 
 
 interface propsInterface extends IAppSettingState, IUserProfileState {

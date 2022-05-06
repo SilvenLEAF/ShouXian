@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 function HomeStack() {
   return (
     <Stack.Navigator screenOptions={{
-      title: "Home Stack",
+      title: "HomeStack",
       headerMode: "screen",
       cardStyle: {
         backgroundColor: rootVariables.bodyBG,
