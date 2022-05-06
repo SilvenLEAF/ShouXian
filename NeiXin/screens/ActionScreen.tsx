@@ -13,12 +13,14 @@ import { IUserProgressState } from '../store/reducers/userProgressReducer';
 import { IUserProfileState } from '../store/reducers/userProfileReducer';
 
 import userProgressActions from '../store/actions/userProgressAction';
+import { Button } from 'react-native-paper';
+import rootVariables from '../root/rootVariables';
 
 
 
 interface IProp extends IAppSettingState, IUserProgressState, IUserProfileState {
   navigation: DrawerNavigationProp<any>,
-  
+
   progress: {
     updateRank: typeof userProgressActions.updateRank,
     updateLevel: typeof userProgressActions.updateLevel,
@@ -27,7 +29,9 @@ interface IProp extends IAppSettingState, IUserProgressState, IUserProfileState 
   },
 }
 
-function HomeScreen({ navigation }: IProp) {
+function HomeScreen(props: IProp) {
+  const { navigation } = props;
+
   const goTo = () => {
     navigation.navigate('About Page')
   }
@@ -35,6 +39,21 @@ function HomeScreen({ navigation }: IProp) {
     <View style={{ ...rootStyles.container, ...rootStyles.centered }}>
       <TouchableOpacity onPress={goTo}>
         <Text>有一个梦有一个灵魂有一个心</Text>
+        <View style={{justifyContent: 'center', flexDirection: 'row', }}>
+
+          <Button color={props.themeColor} mode="outlined" uppercase={false}
+            style={{ ...rootStyles.btn, width: 100, margin: 5 }}
+            onPress={() => props.navigation.navigate('Home Page')}
+          >
+            Home
+          </Button>
+          <Button color={rootVariables.color.greenColor} mode="outlined" uppercase={false}
+            style={{ ...rootStyles.btn, width: 100, margin: 5 }}
+            onPress={() => props.navigation.navigate('About Page')}
+          >
+            About
+          </Button>
+        </View>
       </TouchableOpacity>
     </View>
   )
