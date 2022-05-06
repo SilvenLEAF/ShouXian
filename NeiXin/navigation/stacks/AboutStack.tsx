@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 
-import AboutScreen from '../../screens/AboutScreen';
+import AboutScreen from '../../screens/about/AboutScreen';
 import HamburgerHeader from '../../shared/HamburgerHeader';
 import DetailScreen from '../../screens/DetailScreen';
 

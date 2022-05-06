@@ -2,11 +2,11 @@ import React from 'react';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { Text, View, TouchableOpacity } from 'react-native';
 
-import rootStyles from '../root/rootStyles';
+import rootStyles from '../../root/rootStyles';
 // __________redux stuff
 import { connect } from 'react-redux';
-import { IRootState } from '../store/store';
-import { IAppSettingState } from '../store/reducers/appSettingsReducer';
+import { IRootState } from '../../store/store';
+import { IAppSettingState } from '../../store/reducers/appSettingsReducer';
 import { Button } from 'react-native-paper';
 
 

@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import rootVariables from '../../root/rootVariables';
 import HamburgerHeader from '../../shared/HamburgerHeader';
 
-import HomeScreen from '../../screens/HomeScreen';
+import HomeScreen from '../../screens/home/HomeScreen';
 import DetailScreen from '../../screens/DetailScreen';
 
 

@@ -3,18 +3,18 @@ import React from 'react';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { Text, View, TouchableOpacity } from 'react-native';
 
-import rootStyles from '../root/rootStyles';
+import rootStyles from '../../root/rootStyles';
 // __________redux stuff
 import { connect } from 'react-redux';
-import { IRootState } from '../store/store';
+import { IRootState } from '../../store/store';
 
-import { IAppSettingState } from '../store/reducers/appSettingsReducer';
-import { IUserProgressState } from '../store/reducers/userProgressReducer';
-import { IUserProfileState } from '../store/reducers/userProfileReducer';
+import { IAppSettingState } from '../../store/reducers/appSettingsReducer';
+import { IUserProgressState } from '../../store/reducers/userProgressReducer';
+import { IUserProfileState } from '../../store/reducers/userProfileReducer';
 
-import userProgressActions from '../store/actions/userProgressAction';
+import userProgressActions from '../../store/actions/userProgressAction';
 import { Button } from 'react-native-paper';
-import rootVariables from '../root/rootVariables';
+import rootVariables from '../../root/rootVariables';
 
 
 
