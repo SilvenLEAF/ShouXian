@@ -104,7 +104,7 @@ function SettingScreen(props: propsInterface) {
 
   return (
     <Provider>
-      <ScrollView contentContainerStyle={rootStyles.container}>
+      <ScrollView contentContainerStyle={rootStyles.scrollContainer}>
         <Portal>
           <Modal visible={showResetDefaultAlert} onDismiss={() => setShowResetDefaultAlert(false)} contentContainerStyle={rootStyles.alertModal}>
             <Text style={rootStyles.alertModalTitle}>Restore Default</Text>

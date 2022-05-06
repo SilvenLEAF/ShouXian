@@ -20,6 +20,11 @@ const rootStyles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
+  scrollContainer: {
+    flexGrow: 1,
+    alignItems: 'center',
+    paddingBottom: 85 + 29,
+  },
   externalLink: {
     color: rootVariables.linkColor,
     marginLeft: 5,

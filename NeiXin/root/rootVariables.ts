@@ -2,7 +2,7 @@ import { assetVariables } from "./variables/assetVariables";
 import { colorPalette } from "./variables/colorPalette";
 import { subVariables } from "./variables/subVariables";
 
-const themeColor = 'red';
+const themeColor = subVariables.color.redColor;
 const bodyBG = 'white';
 const rootVariables = {
   themeColor,

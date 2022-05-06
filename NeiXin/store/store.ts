@@ -7,7 +7,7 @@ export const store = configureStore({
   reducer: {
     app: appSettingsReducer,
     progress: userProgressReducer,
-    profile: userProfileReducer,
+    user: userProfileReducer,
   }
 });
 
@@ -20,5 +20,5 @@ export const store = configureStore({
 export interface IRootState {
   app: IAppSettingState,
   progress: IUserProgressState,
-  profile: IUserProfileState,
+  user: IUserProfileState,
 }

@@ -22,7 +22,7 @@ function AboutScreen(props: propsInterface) {
     props.navigation.navigate(page);
   }
   return (
-    <ScrollView contentContainerStyle={rootStyles.container}>
+    <ScrollView contentContainerStyle={rootStyles.scrollContainer}>
       <Avatar.Image
         source={rootVariables.assets.developerImage}
         size={190}

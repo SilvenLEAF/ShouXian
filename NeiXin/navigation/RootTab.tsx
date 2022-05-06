@@ -24,6 +24,9 @@ import rootVariables from '../root/rootVariables';
 import HomeStack from './stacks/HomeStack';
 import AboutStack from './stacks/AboutStack';
 import SettingStack from './stacks/SettingStack';
+import ProfileStack from './stacks/ProfileStack';
+import ContactStack from './stacks/ContactStack';
+import AsyncStorageStack from './stacks/AsyncStorageStack';
 
 interface propsInterface extends IAppSettingState {
   updateThemeColor: typeof updateThemeColor,
@@ -77,7 +80,7 @@ function RootTab(props: propsInterface) {
 
       }}
     >
-      <Tab.Screen name="HomeStack" component={HomeStack}
+      <Tab.Screen name="HomeStack" component={AsyncStorageStack}
         options={{
           title: "DictionaryStack",
           tabBarIcon: ({ focused }) => (
@@ -95,7 +98,7 @@ function RootTab(props: propsInterface) {
         }}
       />
 
-      <Tab.Screen name="CardGridStack" component={AboutStack}
+      <Tab.Screen name="CardGridStack" component={ContactStack}
         options={{
           title: "CardGridStack",
           tabBarIcon: ({ focused }) => (
@@ -113,13 +116,13 @@ function RootTab(props: propsInterface) {
         }}
       />
 
-      <Tab.Screen name="ActionStack" component={HomeStack}
+      <Tab.Screen name="ActionStack" component={AboutStack}
         options={{
           title: "ActionStack",
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
               <IconFontAwesome5
-                name="skull"
+                name="heart-broken"
                 color={focused ? props.themeColor : rootVariables.fontColor}
                 size={30}
                 style={{ color: '#f4f4f4' }}
@@ -149,7 +152,7 @@ function RootTab(props: propsInterface) {
         }}
       />
       
-      <Tab.Screen name="ProfileStack" component={HomeStack}
+      <Tab.Screen name="ProfileStack" component={ProfileStack}
         options={{
           title: "ProfileStack",
           tabBarIcon: ({ focused }) => (

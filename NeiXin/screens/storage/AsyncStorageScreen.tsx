@@ -60,7 +60,7 @@ function AsyncStorageScreen(props: propsInterface) {
   }, [])
   return (
     <Provider>
-      <ScrollView contentContainerStyle={{ ...rootStyles.container }}>
+      <ScrollView contentContainerStyle={{ ...rootStyles.scrollContainer }}>
 
         <View style={{ ...rootStyles.container, marginTop: 50}}>
           <Text>Welcome to Storage Screen!</Text>
