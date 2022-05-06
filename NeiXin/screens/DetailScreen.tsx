@@ -7,7 +7,6 @@ import rootStyles from '../root/rootStyles';
 import { connect } from 'react-redux';
 import { IRootState } from '../store/store';
 import { IAppSettingState } from '../store/reducers/appSettingsReducer';
-import { Button } from 'react-native-paper';
 
 
 
@@ -15,16 +14,17 @@ interface IProp extends IAppSettingState {
   navigation: DrawerNavigationProp<any>,
 }
 
-function HomeScreen(props: IProp) {
+function DetailScreen(props: IProp) {
   const { navigation } = props;
 
   const goTo = () => {
-    navigation.navigate('DetailScreen')
+    navigation.navigate('Home Page')
   }
   return (
     <View style={{ ...rootStyles.container, ...rootStyles.centered }}>
-      <Text style={{ textAlign: 'center' }}>欢迎光临</Text>
-      <Button mode="contained" onPress={goTo}>Details</Button>
+      <TouchableOpacity onPress={goTo}>
+        <Text>...Details...</Text>
+      </TouchableOpacity>
     </View>
   )
 };
@@ -35,4 +35,4 @@ const mapStateToProps = (state: IRootState) => {
   }
 }
 
-export default connect(mapStateToProps)(HomeScreen);
+export default connect(mapStateToProps)(DetailScreen);

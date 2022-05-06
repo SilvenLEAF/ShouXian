@@ -6,19 +6,19 @@ const rootStyles = StyleSheet.create({
   ...btnStyles,
   ...alertModalStyles,
   centered: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  container: {
+  bottomedContainer: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: rootVariables.bodyBG,
     marginBottom: 85 + 29,
   },
-  bottomlessContainer: {
+  container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: rootVariables.bodyBG,
   },
   externalLink: {
     color: rootVariables.linkColor,
