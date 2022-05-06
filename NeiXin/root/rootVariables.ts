@@ -1,4 +1,5 @@
 import { assetVariables } from "./variables/assetVariables";
+import { colorPalette } from "./variables/colorPalette";
 import { subVariables } from "./variables/subVariables";
 
 const themeColor = 'red';
@@ -12,8 +13,11 @@ const rootVariables = {
   
   linkColor: 'blue',
   fontColor: subVariables.color.grayColor,
+
+  toastTopOffset: 50,
   
   assets: assetVariables,
+  colorPalette: colorPalette,
   ...subVariables,
 };
 

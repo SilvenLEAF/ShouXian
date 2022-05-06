@@ -13,7 +13,6 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 // __________store (redux + async)
 import { connect } from 'react-redux';
-import AsyncStore from '../utils/AsyncStore';
 
 import { IRootState } from '../store/store';
 import { IAppSettingState } from '../store/reducers/appSettingsReducer';
@@ -24,6 +23,7 @@ import rootVariables from '../root/rootVariables';
 // __________screens and/or stacks
 import HomeStack from './stacks/HomeStack';
 import AboutStack from './stacks/AboutStack';
+import SettingStack from './stacks/SettingStack';
 
 interface propsInterface extends IAppSettingState {
   updateThemeColor: typeof updateThemeColor,
@@ -77,23 +77,6 @@ function RootTab(props: propsInterface) {
 
       }}
     >
-      {/* <Tab.Screen name="HomeStack" component={HomeStack}
-        options={{
-          title: "HomeStack",
-          tabBarIcon: ({ focused }) => (
-            <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-              <IconMCI
-                name="home"
-                color={focused ? props.themeColor : rootVariables.fontColor}
-                size={27}
-              />
-              <Text style={{ color: focused ? props.themeColor : rootVariables.fontColor, fontSize: 12 }}>
-                HOME
-              </Text>
-            </View>
-          )
-        }}
-      /> */}
       <Tab.Screen name="HomeStack" component={HomeStack}
         options={{
           title: "DictionaryStack",
@@ -148,7 +131,7 @@ function RootTab(props: propsInterface) {
         }}
       />
 
-      <Tab.Screen name="SettingStack" component={AboutStack}
+      <Tab.Screen name="SettingStack" component={SettingStack}
         options={{
           title: "SettingStack",
           tabBarIcon: ({ focused }) => (
