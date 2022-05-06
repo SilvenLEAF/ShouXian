@@ -1,7 +1,10 @@
+import { subVariables } from "./variables/subVariables";
+
 const rootVariables = {
-  bodyBG: 'white',
   themeColor: 'red',
+  bodyBG: 'white',
   linkColor: 'blue',
+  ...subVariables,
 };
 
-export default rootVariables
+export default rootVariables;

@@ -1,14 +1,22 @@
-import { NavigationProp } from '@react-navigation/native';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
 import React from 'react';
-import { Text, View } from 'react-native';
-import rootStyles from '../root/rootStyles';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { Text, View, TouchableOpacity } from 'react-native';
 
-interface IProp {
+import rootStyles from '../root/rootStyles';
+// __________redux stuff
+import { connect } from 'react-redux';
+import { IRootState } from '../store/store';
+import { IAppSettingState } from '../store/reducers/appSettingsReducer';
+
+
+
+interface IProp extends IAppSettingState {
   navigation: DrawerNavigationProp<any>,
 }
-function HomeScreen({ navigation }: IProp) {
+
+function HomeScreen(props: IProp) {
+  const { navigation } = props;
+
   const goTo = () => {
     navigation.navigate('About Page')
   }
@@ -21,4 +29,10 @@ function HomeScreen({ navigation }: IProp) {
   )
 };
 
-export default HomeScreen;
+const mapStateToProps = (state: IRootState) => {
+  return {
+    ...state.app,
+  }
+}
+
+export default connect(mapStateToProps)(HomeScreen);
