@@ -10,6 +10,7 @@ import rootStyles from '../../root/rootStyles';
 import { connect } from 'react-redux';
 import { IRootState } from '../../store/store';
 import { IAppSettingState } from '../../store/reducers/appSettingsReducer';
+import xconfig from '../../core/xconfig';
 
 
 
@@ -25,9 +26,9 @@ function ContactScreen(props: propsInterface) {
     <View style={rootStyles.container}>
 
       <View style={{ ...styles.contactSection, ...styles.contactSectionTop }}>
-        <Text style={{ ...styles.title, color: props.themeColor }}>Contact us at helpmeleaf@gmail.com</Text>
+        <Text style={{ ...styles.title, color: props.themeColor }}>Contact us at {xconfig.contact.contactEmail}</Text>
         {/* <Text style={styles.subtitle}>CEO and Founder, SilvenMOOR</Text> */}
-        <Text style={styles.subtitle}>(Response within 24hrs)</Text>
+        <Text style={styles.subtitle}>{xconfig.contact.contactSubtitle}</Text>
       </View>
 
       <View style={styles.contactSection}>
@@ -51,8 +52,7 @@ function ContactScreen(props: propsInterface) {
         <View style={styles.contactPara}>
           <Text style={styles.contactParaText}>
             Your query not solved yet? Contact me personally!
-            Here is my contact info: Talegram handle @SilvenLEAF
-
+            Here is my contact info: Twitter handle @SilvenLEAF
           </Text>
         </View>
       </View>
@@ -61,8 +61,8 @@ function ContactScreen(props: propsInterface) {
 
       <View style={{ ...styles.contactSection, ...styles.knowMore }}>
         <Text>Still facing issues? Visit</Text>
-        <Text style={rootStyles.externalLink} onPress={() => Linking.openURL('https://SilvenLEAF.github.io')}>
-          SilvenLEAF.github.io
+        <Text style={rootStyles.externalLink} onPress={() => Linking.openURL(xconfig.contact.websiteOpenUrl)}>
+          {xconfig.contact.websiteDisplayUrl}
         </Text>
       </View>
 

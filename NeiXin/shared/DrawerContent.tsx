@@ -25,6 +25,7 @@ import { IAppSettingState } from '../store/reducers/appSettingsReducer';
 
 import appSettingsActions from '../store/actions/appSettingsAction';
 import { IUserProgressState } from '../store/reducers/userProgressReducer';
+import xconfig from '../core/xconfig';
 
 
 
@@ -54,7 +55,7 @@ function DrawerContent(props: IProp) {
                 style={styles.profileImage}
               />
               <View style={{ marginLeft: 15, flexDirection: 'column' }}>
-                <Title style={styles.title}>ShouXian APP</Title>
+                <Title style={styles.title}>{xconfig.about.appDisplayName}</Title>
                 <Caption style={styles.caption}>By @SilvenLEAF</Caption>
               </View>
             </View>
@@ -196,7 +197,7 @@ function DrawerContent(props: IProp) {
             />
 
           )}
-          onPress={() => { Linking.openURL("https://SilvenLEAF.github.io/") }}
+          onPress={() => { Linking.openURL(xconfig.contact.websiteOpenUrl) }}
           label="Know SilvenLEAF"
           labelStyle={{
             color: rootVariables.fontColor

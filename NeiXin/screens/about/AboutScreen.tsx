@@ -10,6 +10,7 @@ import rootStyles from '../../root/rootStyles';
 import { connect } from 'react-redux';
 import { IRootState } from '../../store/store';
 import { IAppSettingState } from '../../store/reducers/appSettingsReducer';
+import xconfig from '../../core/xconfig';
 
 
 
@@ -22,30 +23,28 @@ function AboutScreen(props: propsInterface) {
     props.navigation.navigate(page);
   }
   return (
-    <ScrollView contentContainerStyle={rootStyles.scrollContainer}>
+    <View style={rootStyles.container}>
       <Avatar.Image
         source={rootVariables.assets.developerImage}
         size={190}
       />
       <View style={styles.aboutSection}>
-        <Text style={{ ...styles.title, color: props.themeColor }}>Hello there! I'm SilvenLEAF</Text>
-        <Text style={styles.subtitle}>Software Engineer</Text>
+        <Text style={{ ...styles.title, color: props.themeColor }}>{xconfig.about.title}</Text>
+        <Text style={styles.subtitle}>{xconfig.about.designation}</Text>
       </View>
 
       <View style={styles.aboutSection}>
         <View style={styles.aboutPara}>
           <Text style={styles.aboutParaText}>
-            A sweet little boy, {new Date().getFullYear() - 2002} years old, born on 31st Dec 2001.
-            Insanely obsessed with Chinese, Japanese and with Tech.
-            Wanna know more about me?
+            {xconfig.about.aboutMe}
           </Text>
         </View>
       </View>
 
       <View style={{ ...styles.aboutSection, ...styles.knowMore }}>
         <Text>To know more, visit</Text>
-        <Text style={rootStyles.externalLink} onPress={() => Linking.openURL('https://SilvenLEAF.github.io')}>
-          SilvenLEAF.github.io
+        <Text style={rootStyles.externalLink} onPress={() => Linking.openURL(xconfig.contact.websiteOpenUrl)}>
+          {xconfig.contact.websiteDisplayUrl}
         </Text>
       </View>
 
@@ -53,13 +52,7 @@ function AboutScreen(props: propsInterface) {
       <View style={styles.aboutSection}>
         <View style={styles.aboutPara}>
           <Text style={styles.aboutParaText}>
-            About this APP, created and developed by SilvenLEAF.
-            Kill your HSK with your HSKill.
-            Best app to revise Chinese Character recognition and Vocabulary.
-            All based on HSK wordlists.
-            Learn at your own pace. Practice anytime, anywhere.
-            Diverse way to revise and solidify your Character recognition.
-            Make your own custom collections and enjoy learning! 加油!!!
+           {xconfig.about.aboutApp}
           </Text>
         </View>
       </View>
@@ -67,13 +60,13 @@ function AboutScreen(props: propsInterface) {
 
       <View style={{ ...styles.aboutSection, ...styles.copyright }}>
         <Text>&copy; {new Date().getFullYear()} All rights reserved to </Text>
-        <Text style={rootStyles.externalLink} onPress={() => Linking.openURL('https://www.linkedin.com/in/silvenleaf/')}>
+        <Text style={rootStyles.externalLink} onPress={() => Linking.openURL(xconfig.contact.clickSilvenLEAFLink)}>
           SilvenLEAF (Manash Sarma)
         </Text>
       </View>
 
 
-    </ScrollView>
+    </View>
   );
 }
 
